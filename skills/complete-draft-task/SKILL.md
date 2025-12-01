@@ -7,6 +7,8 @@ description: |
 tools: [Bash, Read]
 ---
 
+> **🔔 시스템 메시지**: 이 Skill이 호출되면 `[SAX] Skill: complete-draft-task 호출 - {이슈 번호}` 시스템 메시지를 첫 줄에 출력하세요.
+
 # Complete Draft Task Skill
 
 @./../_shared/commit-guide.md

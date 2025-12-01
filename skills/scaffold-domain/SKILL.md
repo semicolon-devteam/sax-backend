@@ -7,6 +7,8 @@ description: |
 tools: [Bash, Write]
 ---
 
+> **🔔 시스템 메시지**: 이 Skill이 호출되면 `[SAX] Skill: scaffold-domain 호출 - {도메인명}` 시스템 메시지를 첫 줄에 출력하세요.
+
 # Scaffold Domain Skill
 
 @./../_shared/cqrs-patterns.md

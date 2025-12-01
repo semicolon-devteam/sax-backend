@@ -7,6 +7,8 @@ description: |
 tools: [Read, Write, Edit, Bash]
 ---
 
+> **🔔 시스템 메시지**: 이 Skill이 호출되면 `[SAX] Skill: implement 호출 - {구현 대상}` 시스템 메시지를 첫 줄에 출력하세요.
+
 # Implement Skill
 
 @./../_shared/reactive-guide.md

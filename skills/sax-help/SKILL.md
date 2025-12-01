@@ -4,6 +4,8 @@ description: SAX-Backend 사용 가이드 및 도움말. Use when (1) "도움말
 tools: [Read]
 ---
 
+> **🔔 시스템 메시지**: 이 Skill이 호출되면 `[SAX] Skill: sax-help 호출` 시스템 메시지를 첫 줄에 출력하세요.
+
 # SAX Help Skill
 
 > SAX-Backend 패키지 사용 가이드
