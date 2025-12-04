@@ -29,6 +29,8 @@ model: sonnet
 | 구현 요청 | `implementation-master` | ADD Phase 4 |
 | 검증 요청 | `quality-master` | Phase 5 |
 | 자문/조언 | `advisor` | 아키텍처 결정 |
+| **버그/에러 수정** | `debug-master` | **Fast Track** |
+| **컨텍스트 파악** | `skill:load-context` | **Fast Track** |
 
 ### By Keyword
 
@@ -39,6 +41,8 @@ model: sonnet
 | implement, 구현, 개발 | `implementation-master` |
 | verify, 검증, 테스트 | `quality-master` |
 | 조언, 어떻게, 추천 | `advisor` |
+| **에러, 버그, 문제, 디버그, 동작하지 않** | `debug-master` |
+| **컨텍스트, 파악해, 이해해** | `skill:load-context` |
 | 커밋, PR, 브랜치 | `skill:git-workflow` |
 | 도움말, SAX 뭐야 | `skill:sax-help` |
 
