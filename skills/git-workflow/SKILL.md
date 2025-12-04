@@ -117,7 +117,7 @@ ISSUE_NUM=$(git branch --show-current | grep -oE '^[0-9]+|/[0-9]+' | grep -oE '[
 **Related**: #35
 ```
 
-## 프로젝트 보드 날짜 속성 설정
+## 프로젝트 보드 상태 관리
 
 > **📖 상세 API**: sax-next/skills/project-board 참조
 
@@ -125,23 +125,23 @@ ISSUE_NUM=$(git branch --show-current | grep -oE '^[0-9]+|/[0-9]+' | grep -oE '[
 |----------|----------|------|
 | → **작업중** | `시작일` | 작업 시작 시 |
 | → **리뷰요청** | `종료일` | dev 머지 및 리뷰 요청 시 |
+| → **테스트중** | (할당자 변경 없음) | PR 머지 완료 시 |
 
-### PR 머지 후 종료일 설정
+> **ℹ️ 백엔드 특성**: 테스트중 상태에서 별도 QA 할당 없이 담당 엔지니어가 테스트 코드로 검증합니다.
+
+### PR 머지 후 상태 변경
 
 ```bash
-# dev 머지 완료 후 리뷰요청 상태 + 종료일 설정
-TODAY=$(date +%Y-%m-%d)
-
-# 1. 상태 변경 (작업중 → 리뷰요청)
-# 2. 종료일 설정 (오늘 날짜)
+# PR 머지 완료 후 테스트중 상태로 변경
+# (백엔드는 QA 할당 없이 담당자 유지)
 
 # skill:project-board 호출
 skill: project-board({
   repo: "{repo}",
   issue_number: {issue_number},
-  target_status: "리뷰요청"
+  target_status: "테스트중"
 })
-# → 자동으로 종료일도 함께 설정됨
+# → 할당자 변경 없음 (담당 엔지니어가 테스트 진행)
 ```
 
 ## Related Skills
